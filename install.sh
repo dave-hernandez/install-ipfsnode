@@ -7,8 +7,12 @@
 
 #  BUILT FOR CENTOS 7 x64
 
+yum install -y wget
+yum install -y unzip
+
 wget https://gobuilder.me/get/github.com/ipfs/go-ipfs/cmd/ipfs/ipfs_master_linux-amd64.zip
 unzip ipfs_master_linux-amd64.zip
+rm -f ipfs_master_linux-amd64.zip
 cp ipfs/ipfs /usr/local/bin/ipfs
 
 firewall-cmd --zone=public --add-port=5001/tcp --permanent
