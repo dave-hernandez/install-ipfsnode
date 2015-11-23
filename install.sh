@@ -12,6 +12,7 @@ unzip ipfs_master_linux-amd64.zip
 cp ipfs/ipfs /usr/local/bin/ipfs
 
 firewall-cmd --zone=public --add-port=5001/tcp --permanent
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
 systemctl restart firewalld
 
 ipfs init
