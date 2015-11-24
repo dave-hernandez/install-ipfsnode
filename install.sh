@@ -21,4 +21,6 @@ systemctl restart firewalld
 
 ipfs init
 
+find ~/.ipfs/config -type f -exec sed -i 's/127.0.0.1/0.0.0.0/g' {} \;
+
 ipfs daemon
